@@ -17,3 +17,10 @@ export interface Conversation {
   updatedAt: number;
 }
 
+// Estados posibles del generador de IA
+export type AIStatus =
+  | "idle"        // Esperando input
+  | "loading"     // Enviando request
+  | "streaming"   // Recibiendo tokens
+  | "done"        // Completado
+  | "error";      // Error
