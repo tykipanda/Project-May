@@ -1,1 +1,7 @@
-"use client";  // ← necesario porque usa hooks 
+"use client"; 
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useChatStore } from "@/store/chatStore";
+import { PlusIcon, ChatBubbleIcon } from "@radix-ui/react-icons";
+
