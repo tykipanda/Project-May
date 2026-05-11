@@ -1,0 +1,1 @@
+"use client";  // ← necesario porque usa hooks 
