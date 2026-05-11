@@ -33,6 +33,23 @@ export function Sidebar() {
         </button>
       </div>
 
+    {/* Lista de conversaciones */}
+    <nav className="flex-1 overflow-y-auto p-2 space-y-1">
+        {conversations.map((conv) => {
+          const isActive = pathname === `/chat/${conv.id}`;
+          return (
+            <Link
+              key={conv.id}
+              href={`/chat/${conv.id}`}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm
+                         transition-colors truncate
+                         ${isActive
+                           ? "bg-indigo-600 text-white"
+                           : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                         }`}
+            >
+
+
 
 
 
