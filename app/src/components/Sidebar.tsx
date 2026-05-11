@@ -14,5 +14,13 @@ export function Sidebar() {
     // router.push lo maneja el store
   };
 
+  return (
+    <aside className="w-64 flex flex-col bg-gray-900 border-r border-gray-800">
+      {/* Header */}
+      <div className="p-4 border-b border-gray-800">
+        <h1 className="text-lg font-bold text-white">⚡ Mi IA</h1>
+      </div>
+
+
 
 
