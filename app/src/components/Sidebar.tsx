@@ -48,6 +48,15 @@ export function Sidebar() {
                            : "text-gray-400 hover:bg-gray-800 hover:text-white"
                          }`}
             >
+              <ChatBubbleIcon className="shrink-0" />
+              <span className="truncate">{conv.title}</span>
+            </Link>
+          );
+        })}
+      </nav>
+    </aside>
+  );
+}
 
 
 
