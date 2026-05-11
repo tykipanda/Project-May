@@ -29,6 +29,10 @@ export function Sidebar() {
                      bg-indigo-600 hover:bg-indigo-500 text-white text-sm
                      transition-colors"
         >
+        <PlusIcon /> Nueva conversación
+        </button>
+      </div>
+
 
 
 
