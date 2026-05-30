@@ -9,3 +9,6 @@ export default function ChatPage() {
   const conversation = useChatStore(s =>
     s.conversations.find(c => c.id === id)
   );
+
+    if (!conversation) {
+    return (
