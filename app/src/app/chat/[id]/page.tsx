@@ -17,3 +17,6 @@ export default function ChatPage() {
       </div>
     );
   }
+
+  return <ChatWindow conversation={conversation} />;
+}
