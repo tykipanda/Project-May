@@ -12,3 +12,8 @@ export default function ChatPage() {
 
     if (!conversation) {
     return (
+      <div className="flex items-center justify-center h-full text-gray-500">
+        Conversación no encontrada
+      </div>
+    );
+  }
