@@ -18,3 +18,9 @@ interface ChatState {
   // Acciones - mensajes
   addMessage: (convId: string, msg: Omit<Message, "id" | "createdAt">) => void;
   appendToLastMessage: (convId: string, text: string) => void;
+
+  // Acciones - estado IA (state machine)
+  setStatus: (status: AIStatus) => void;
+  setError: (error: string | null) => void;
+  resetStatus: () => void;
+}
