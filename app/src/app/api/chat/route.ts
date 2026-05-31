@@ -24,3 +24,9 @@ export async function POST(req: NextRequest) {
           chunk.type === "content_block_delta" &&
           chunk.delta.type === "text_delta"
         ) {
+          controller.enqueue(encoder.encode(chunk.delta.text));
+        }
+      }
+      controller.close();
+    },
+  });
