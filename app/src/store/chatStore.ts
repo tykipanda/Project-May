@@ -9,3 +9,8 @@ interface ChatState {
   activeId: string | null;
   status: AIStatus;
   error: string | null;
+
+  // Acciones - conversaciones
+  createConversation: () => string;
+  deleteConversation: (id: string) => void;
+  setActiveId: (id: string) => void;
