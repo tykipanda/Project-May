@@ -10,3 +10,5 @@ export async function POST(req: NextRequest) {
 
    // Creamos un ReadableStream para hacer streaming al cliente
   const stream = new ReadableStream({
+    async start(controller) {
+      const encoder = new TextEncoder();
