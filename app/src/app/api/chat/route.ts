@@ -18,3 +18,9 @@ export async function POST(req: NextRequest) {
         max_tokens: 1024,
         messages,
       });
+
+      for await (const chunk of response) {
+        if (
+          chunk.type === "content_block_delta" &&
+          chunk.delta.type === "text_delta"
+        ) {
