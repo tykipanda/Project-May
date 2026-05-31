@@ -15,3 +15,6 @@ export async function POST(req: NextRequest) {
 
       const response = await client.messages.stream({
         model: "claude-sonnet-4-20250514",
+        max_tokens: 1024,
+        messages,
+      });
