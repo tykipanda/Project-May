@@ -7,3 +7,6 @@ const client = new Anthropic({
 
 export async function POST(req: NextRequest) {
   const { messages } = await req.json();
+
+   // Creamos un ReadableStream para hacer streaming al cliente
+  const stream = new ReadableStream({
