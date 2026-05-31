@@ -4,3 +4,6 @@ import Anthropic from "@anthropic-ai/sdk";
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
+
+export async function POST(req: NextRequest) {
+  const { messages } = await req.json();
