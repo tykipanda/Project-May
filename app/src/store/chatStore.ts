@@ -14,3 +14,7 @@ interface ChatState {
   createConversation: () => string;
   deleteConversation: (id: string) => void;
   setActiveId: (id: string) => void;
+
+  // Acciones - mensajes
+  addMessage: (convId: string, msg: Omit<Message, "id" | "createdAt">) => void;
+  appendToLastMessage: (convId: string, text: string) => void;
