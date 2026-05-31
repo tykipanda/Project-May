@@ -12,3 +12,6 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream({
     async start(controller) {
       const encoder = new TextEncoder();
+
+      const response = await client.messages.stream({
+        model: "claude-sonnet-4-20250514",
