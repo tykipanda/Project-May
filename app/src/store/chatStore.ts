@@ -85,3 +85,16 @@ export const useChatStore = create<ChatState>()(
             };
           }),
         })),
+
+      // Streaming: añade texto al último mensaje del assistant
+      appendToLastMessage: (convId, text) =>
+        set(state => ({
+          conversations: state.conversations.map(c => {
+            if (c.id !== convId) return c;
+            const msgs = [...c.messages];
+            const last = msgs[msgs.length - 1];
+            if (!last || last.role !== "assistant") return c;
+            msgs[msgs.length - 1] = { ...last, content: last.content + text };
+            return { ...c, messages: msgs, updatedAt: Date.now() };
+          }),
+        })),
