@@ -66,3 +66,10 @@ export const useChatStore = create<ChatState>()(
       // Añadir mensaje a una conversación
       addMessage: (convId, msg) =>
         set(state => ({
+          conversations: state.conversations.map(c => {
+            if (c.id !== convId) return c;
+            const newMsg: Message = {
+              ...msg,
+              id: genId(),
+              createdAt: Date.now(),
+            };
