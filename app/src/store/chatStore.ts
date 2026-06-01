@@ -62,3 +62,7 @@ export const useChatStore = create<ChatState>()(
         })),
 
       setActiveId: (id) => set({ activeId: id }),
+
+      // Añadir mensaje a una conversación
+      addMessage: (convId, msg) =>
+        set(state => ({
