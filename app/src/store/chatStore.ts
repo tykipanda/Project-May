@@ -24,3 +24,7 @@ interface ChatState {
   setError: (error: string | null) => void;
   resetStatus: () => void;
 }
+
+// ── Helper para generar IDs únicos ───────────────────────
+const genId = () => Math.random().toString(36).slice(2, 11);
+
