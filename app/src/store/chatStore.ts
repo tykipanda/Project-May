@@ -73,3 +73,15 @@ export const useChatStore = create<ChatState>()(
               id: genId(),
               createdAt: Date.now(),
             };
+            // Auto-título: primera pregunta del usuario
+            const title = c.messages.length === 0 && msg.role === "user"
+              ? msg.content.slice(0, 40)
+              : c.title;
+            return {
+              ...c,
+              title,
+              messages: [...c.messages, newMsg],
+              updatedAt: Date.now(),
+            };
+          }),
+        })),
