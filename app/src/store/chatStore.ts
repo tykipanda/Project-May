@@ -49,3 +49,9 @@ export const useChatStore = create<ChatState>()(
           createdAt: now,
           updatedAt: now,
         };
+        set(state => ({
+          conversations: [newConv, ...state.conversations],
+          activeId: id,
+        }));
+        return id;
+      },
