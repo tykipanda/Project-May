@@ -30,3 +30,10 @@ const genId = () => Math.random().toString(36).slice(2, 11);
 
 // ── Store con persistencia en localStorage ───────────────
 export const useChatStore = create<ChatState>()(
+  persist(
+    (set, get) => ({
+      // Estado inicial
+      conversations: [],
+      activeId: null,
+      status: "idle",
+      error: null,
