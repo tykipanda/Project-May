@@ -39,3 +39,13 @@ export const useChatStore = create<ChatState>()(
       error: null,
 
     //Crear conversación nueva y devolver su id
+    createConversation: () => {
+        const id = genId();
+        const now = Date.now();
+        const newConv: Conversation = {
+          id,
+          title: "Nueva conversación",
+          messages: [],
+          createdAt: now,
+          updatedAt: now,
+        };
