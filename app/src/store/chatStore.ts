@@ -37,3 +37,5 @@ export const useChatStore = create<ChatState>()(
       activeId: null,
       status: "idle",
       error: null,
+
+    //Crear conversación nueva y devolver su id
