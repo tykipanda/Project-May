@@ -60,3 +60,5 @@ export const useChatStore = create<ChatState>()(
           conversations: state.conversations.filter(c => c.id !== id),
           activeId: state.activeId === id ? null : state.activeId,
         })),
+
+      setActiveId: (id) => set({ activeId: id }),
