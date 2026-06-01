@@ -55,3 +55,8 @@ export const useChatStore = create<ChatState>()(
         }));
         return id;
       },
+      deleteConversation: (id) =>
+        set(state => ({
+          conversations: state.conversations.filter(c => c.id !== id),
+          activeId: state.activeId === id ? null : state.activeId,
+        })),
