@@ -98,3 +98,7 @@ export const useChatStore = create<ChatState>()(
             return { ...c, messages: msgs, updatedAt: Date.now() };
           }),
         })),
+
+
+      // State machine del generador IA
+      setStatus: (status) => set({ status }),
