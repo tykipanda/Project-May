@@ -106,3 +106,4 @@ export const useChatStore = create<ChatState>()(
       resetStatus: () => set({ status: "idle", error: null }),
     }),
     {
+      name: "mi-saas-ia-store", // clave en localStorage
