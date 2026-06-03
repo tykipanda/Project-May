@@ -103,3 +103,6 @@ export const useChatStore = create<ChatState>()(
       // State machine del generador IA
       setStatus: (status) => set({ status }),
       setError: (error) => set({ error, status: "error" }),
+      resetStatus: () => set({ status: "idle", error: null }),
+    }),
+    {
