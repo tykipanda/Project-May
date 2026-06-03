@@ -107,3 +107,5 @@ export const useChatStore = create<ChatState>()(
     }),
     {
       name: "mi-saas-ia-store", // clave en localStorage
+      // Solo persistir las conversaciones, no el status
+      partialize: (state) => ({
