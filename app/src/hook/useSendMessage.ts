@@ -10,3 +10,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
   const sendMessage = async (content: string) => {
     if (!conversation) return;
+
+    // 1. Estado → loading
+    setStatus("loading");
