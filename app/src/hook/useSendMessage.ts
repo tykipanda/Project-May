@@ -13,3 +13,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
     // 1. Estado → loading
     setStatus("loading");
+
+    // 2. Añadir mensaje del usuario al store
+    addMessage(convId, { role: "user", content });
