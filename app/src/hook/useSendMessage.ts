@@ -37,3 +37,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
       if (!response.ok) throw new Error("Error en el servidor");
       if (!response.body) throw new Error("Sin respuesta");
+
+      // 4. Estado → streaming
+      setStatus("streaming");
