@@ -16,3 +16,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
     // 2. Añadir mensaje del usuario al store
     addMessage(convId, { role: "user", content });
+
+    // 3. Añadir placeholder del assistant
+    addMessage(convId, { role: "assistant", content: "" });
