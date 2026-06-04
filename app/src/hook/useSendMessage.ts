@@ -7,3 +7,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
   const conversation = useChatStore(s =>
     s.conversations.find(c => c.id === convId)
   );
+
+  const sendMessage = async (content: string) => {
+    if (!conversation) return;
