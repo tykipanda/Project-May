@@ -43,3 +43,8 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
         ))}
         <div ref={bottomRef} />
       </div>
+
+      {/* Input */}
+      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-800">
+        <div className="flex gap-2">
+          <input
