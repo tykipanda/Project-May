@@ -44,3 +44,10 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
       // 5. Leer el stream token a token
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const text = decoder.decode(value);
+        appendToLastMessage(convId, text);  // actualiza Zustand
+      }
