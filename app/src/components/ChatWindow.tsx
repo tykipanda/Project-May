@@ -9,3 +9,8 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
   const bottomRef = useRef<HTMLDivElement>(null);
   const { sendMessage, status } = useSendMessage(conversation.id);
   const isGenerating = status === "loading" || status === "streaming";
+
+    // Auto-scroll al último mensaje
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [conversation.messages]);
