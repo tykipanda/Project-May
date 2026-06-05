@@ -31,3 +31,9 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
           <div key={msg.id}
             className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
+            <div className={`max-w-2xl rounded-2xl px-4 py-3 text-sm
+              ${msg.role === "user"
+                ? "bg-indigo-600 text-white"
+                : "bg-gray-800 text-gray-100"
+              }`}
+            >
