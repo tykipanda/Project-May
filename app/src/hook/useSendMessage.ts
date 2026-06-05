@@ -54,3 +54,9 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
       // 6. Estado → done
       setStatus("done");
+
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Error desconocido";
+      setError(msg);
+    }
+  };
