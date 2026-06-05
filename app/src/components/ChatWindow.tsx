@@ -48,3 +48,11 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
       <form onSubmit={handleSubmit} className="p-4 border-t border-gray-800">
         <div className="flex gap-2">
           <input
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            disabled={isGenerating}
+            placeholder="Escribe tu mensaje..."
+            className="flex-1 bg-gray-800 rounded-xl px-4 py-3 text-white
+                       placeholder-gray-500 outline-none focus:ring-2
+                       focus:ring-indigo-500 disabled:opacity-50"
+          />
