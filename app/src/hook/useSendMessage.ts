@@ -60,3 +60,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
       setError(msg);
     }
   };
+
+    return { sendMessage, status: useChatStore(s => s.status) };
+}
