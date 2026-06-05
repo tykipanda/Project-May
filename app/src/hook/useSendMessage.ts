@@ -40,3 +40,7 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
 
       // 4. Estado → streaming
       setStatus("streaming");
+
+      // 5. Leer el stream token a token
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
