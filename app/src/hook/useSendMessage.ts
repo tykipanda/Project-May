@@ -51,3 +51,6 @@ const { addMessage, appendToLastMessage, setStatus, setError } =
         const text = decoder.decode(value);
         appendToLastMessage(convId, text);  // actualiza Zustand
       }
+
+      // 6. Estado → done
+      setStatus("done");
