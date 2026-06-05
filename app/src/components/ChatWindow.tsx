@@ -56,3 +56,10 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
                        placeholder-gray-500 outline-none focus:ring-2
                        focus:ring-indigo-500 disabled:opacity-50"
           />
+          <button
+            type="submit"
+            disabled={isGenerating || !input.trim()}
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500
+                       disabled:opacity-50 disabled:cursor-not-allowed
+                       rounded-xl text-white font-medium transition-colors"
+          >
