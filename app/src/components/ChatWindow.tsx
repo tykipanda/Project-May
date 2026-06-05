@@ -26,3 +26,8 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
   return (
     <div className="flex flex-col h-full">
       {/* Mensajes */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {conversation.messages.map(msg => (
+          <div key={msg.id}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+          >
