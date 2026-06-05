@@ -22,3 +22,7 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
     setInput("");
     await sendMessage(msg);
   };
+
+  return (
+    <div className="flex flex-col h-full">
+      {/* Mensajes */}
