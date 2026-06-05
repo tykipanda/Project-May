@@ -14,3 +14,11 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [conversation.messages]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isGenerating) return;
+    const msg = input;
+    setInput("");
+    await sendMessage(msg);
+  };
