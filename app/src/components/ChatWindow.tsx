@@ -37,3 +37,9 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
                 : "bg-gray-800 text-gray-100"
               }`}
             >
+              {msg.content || (isGenerating ? "▌" : "")}
+            </div>
+          </div>
+        ))}
+        <div ref={bottomRef} />
+      </div>
