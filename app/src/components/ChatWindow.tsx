@@ -67,3 +67,4 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
           </button>
         </div>
       </form>
+    </div>
