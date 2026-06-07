@@ -65,3 +65,4 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
           >
             {isGenerating ? "..." : "Enviar"}
           </button>
+        </div>
