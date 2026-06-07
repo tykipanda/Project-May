@@ -63,3 +63,5 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
                        disabled:opacity-50 disabled:cursor-not-allowed
                        rounded-xl text-white font-medium transition-colors"
           >
+            {isGenerating ? "..." : "Enviar"}
+          </button>
