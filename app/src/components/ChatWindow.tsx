@@ -69,3 +69,4 @@ export function ChatWindow({ conversation }: { conversation: Conversation }) {
       </form>
     </div>
   );
+}
