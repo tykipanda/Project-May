@@ -10,3 +10,6 @@ export function useSendMessage(convId: string) {
 
     const sendMessage = async (content: string) => {
     if (!conversation) return;
+
+    // 1. Estado → loading
+    setStatus("loading");
