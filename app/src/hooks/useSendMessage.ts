@@ -13,3 +13,6 @@ export function useSendMessage(convId: string) {
 
     // 1. Estado → loading
     setStatus("loading");
+
+    // 2. Añadir mensaje del usuario al store
+    addMessage(convId, { role: "user", content });
