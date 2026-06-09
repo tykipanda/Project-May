@@ -32,3 +32,5 @@ export function useSendMessage(convId: string) {
             })),
             { role: "user", content },
           ],
+        }),
+      });
