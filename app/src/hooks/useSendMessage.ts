@@ -30,3 +30,5 @@ export function useSendMessage(convId: string) {
               role: m.role,
               content: m.content,
             })),
+            { role: "user", content },
+          ],
