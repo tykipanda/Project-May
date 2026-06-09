@@ -34,3 +34,5 @@ export function useSendMessage(convId: string) {
           ],
         }),
       });
+
+      if (!response.ok) throw new Error("Error en el servidor");
