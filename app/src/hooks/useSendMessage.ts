@@ -19,3 +19,6 @@ export function useSendMessage(convId: string) {
 
     // 3. Añadir placeholder del assistant
     addMessage(convId, { role: "assistant", content: "" });
+
+    try {
+      const response = await fetch("/api/chat", {
