@@ -43,3 +43,4 @@ export function useSendMessage(convId: string) {
 
       // 5. Leer el stream token a token
       const reader = response.body.getReader();
+      const decoder = new TextDecoder();
