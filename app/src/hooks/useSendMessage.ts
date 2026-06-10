@@ -40,3 +40,6 @@ export function useSendMessage(convId: string) {
 
       // 4. Estado → streaming
       setStatus("streaming");
+
+      // 5. Leer el stream token a token
+      const reader = response.body.getReader();
