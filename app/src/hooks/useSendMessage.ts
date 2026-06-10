@@ -49,3 +49,5 @@ export function useSendMessage(convId: string) {
         const { done, value } = await reader.read();
         if (done) break;
         const text = decoder.decode(value);
+        appendToLastMessage(convId, text);  // actualiza Zustand
+      }
