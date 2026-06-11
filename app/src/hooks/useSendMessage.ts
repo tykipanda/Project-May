@@ -60,4 +60,5 @@ export function useSendMessage(convId: string) {
       setError(msg);
     }
   };
-  
+
+  return { sendMessage, 
