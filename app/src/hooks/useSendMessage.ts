@@ -54,3 +54,5 @@ export function useSendMessage(convId: string) {
 
       // 6. Estado → done
       setStatus("done");
+
+    } catch (err) {
