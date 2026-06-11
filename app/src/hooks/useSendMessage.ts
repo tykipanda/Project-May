@@ -56,3 +56,4 @@ export function useSendMessage(convId: string) {
       setStatus("done");
 
     } catch (err) {
+      const msg = err instanceof Error ? err.message : "Error desconocido";
