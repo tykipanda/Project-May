@@ -61,4 +61,4 @@ export function useSendMessage(convId: string) {
     }
   };
 
-  return { sendMessage, 
+  return { sendMessage, status: useChatStore(s => s.status) };
